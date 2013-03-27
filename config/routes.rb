@@ -22,12 +22,4 @@ FormGenerator::Engine.routes.draw do
 
   match "preview_data/order/:id/version/:version_id.js", :controller => "public/js", :action => "preview", :as => :preview_js_data
   match "preview_data/order/:id/version/:version_id.css", :controller => "public/css", :action => "preview", :as => :preview_css_data
-
-  namespace :backend do
-    resources :orders, :only => [:index, :create, :update, :destroy] do
-      member do
-        get 'preview/:version_id', :action => :preview, :as => :preview
-      end
-    end
-  end
 end
