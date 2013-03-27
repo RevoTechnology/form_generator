@@ -1,0 +1,49 @@
+- content_for :js do
+  = javascript_include_tag preview_js_data_path(@order, @version)
+  = javascript_include_tag public_js_data_path(:version_id => @version.id, :public_hash => @version.order.public_hash)
+  = javascript_include_tag "shared/neatforms/makefile.js"
+  = javascript_include_tag "shared/neatforms/config_#{@version.description.gsub(/\W/, "").downcase}.js" if Rails.application..assets.find_asset("shared/neatforms/config_#{@version.description.gsub(/\W/, "").downcase}.js")
+
+- unless @version.order.skin.custom_css.to_s.empty?
+  - content_for :css do
+    = stylesheet_link_tag preview_css_data_path(@order, @version), :media => "all"
+#previewer
+  = @version.form.render
+.clear
+#hover_error{ :style => "display: none" }
+  %span.corner.tl
+  %span.corner.tr
+  %span.corner.bl
+  %span.corner.br
+  %span.pip
+  %span.content OH HAI
+
+#form-preview
+  %ul
+    - if @version.previous
+      %li.previous
+        %a{ :href => preview_backend_order_path(@version.order, @version.previous) }
+          %p.version
+            %span<> v
+            =@version.previous.version
+          %p.date
+            =date_in_russian @version.previous.updated_at
+
+    %li.current
+      %p.version
+        %span<> v
+        = @version.version
+      %p.date
+        =date_in_russian @version.updated_at
+      %p
+        - if @version.published?
+          = I18n.t("views.links.order_versions.published")
+
+    - if @version.next
+      %li.next
+        %a{ :href => preview_backend_order_path(@version.order, @version.next) }
+          %p.version
+            %span<> v
+            =@version.next.version
+          %p.date
+            =date_in_russian @version.next.updated_at

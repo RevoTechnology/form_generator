@@ -1,0 +1,471 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  views:
+    forms:
+      placeholders:
+        organizations:
+          url: "http://"
+          port: "80"
+      organizations:
+        new: "Создание новой организации"
+        edit: "Редактирование организации"
+      categories:
+        new: "Создание новой категории поля"
+        edit: "Редактирование категории поля"
+        name: "Название категории поля"
+      users:
+        new: "Создание нового пользователя"
+        edit: "Редактирование пользователя"
+        forgot_password: "Восстановление пароля"
+      demo_users:
+        new: "Создание нового демонстрационного пользователя"
+        done: "Ваш демонстрационный аккаунт создан"
+      validations:
+        new: "Создание нового шаблона валидации"
+        edit: "Редактирование шаблона валидации"
+
+    links:
+      sign_in: "Вход"
+      confirm: "Вы уверены?"
+      categories:
+        create: "Создать новую категорию полей"
+        confirm: "С категорией удаляются и поля, принадлежащие ей. Вы уверены, что хотите удалить категорию?"
+        all_categories: "Все категории"
+      fields:
+        create: "Создать новый шаблон поля"
+        all_fields: "Все поля"
+      organizations:
+        create: "Создать новую организацию"
+      orders:
+        via_constructor: "через конструктор"
+        by_hand: "с помощью описания формата вручную"
+        preview: "Просмотр"
+        publish: "Опубликовать"
+        unpublish: "Скрыть заявку"
+        receive_order_code: "Получить код заявки"
+        deletion: "Рассмотреть удаление заявки"
+        review: "Рассмотреть публикацию заявки"
+        remove_publish: "Отказать в публикации"
+        restore: "Восстановить"
+        clone: "Копировать"
+        all_orders: "Все заявки"
+      order_versions:
+        preview: "Просмотр"
+        publish: "Опубликовать"
+        rollback: "Откатиться"
+        published: "Опубликована"
+      skins:
+        create: "Создать новый шаблон"
+        clone: "Копировать"
+        all_skins: "Все шаблоны"
+      users:
+        create: "Добавить пользователя"
+        remove_admin: "Убрать права админа"
+        set_admin: "Добавить права админа"
+        remove_organization_admin: "Убрать права админа организации"
+        set_organization_admin: "Добавить права админа организации"
+        add_supervisor: "Добавить права супервизора"
+        remove_supervisor: "Убрать права супервизора"
+        all_users: "Все пользователи"
+        set_demo: "Демо доступ"
+        remove_demo: "Полный доступ"
+      validations:
+        create: "Создать шаблон валидации"
+        all_validations: "Все валидации"
+      save: "Сохранить"
+      edit: "Редактировать"
+      delete: "Удалить"
+      cancel: "Отменить"
+      send: "Отправить"
+    headers:
+      categories:
+        list: "Категории полей"
+      fields:
+        list: "Шаблоны полей"
+      organizations:
+        list: "Список организаций"
+      orders:
+        list: "Созданные заявки"
+        review: "Рассмотрение заявки"
+      users:
+        list:  "Управление пользователями"
+      validations:
+        list: "Список шаблонов валидаций"
+    texts:
+      backend_hello: "Чтобы начать работу, воспользуйтесь меню сверху."
+      order_create: "Добавить заявку"
+      edit: "Редактировать:"
+      or: "или"
+      login: "Вход в систему"
+      remember_me: "Запомнить меня на этом компьютере"
+      email: "Введите свой email адрес"
+      in_review: "Удаление заявки в рассмотрении "
+  flash:
+    errors:
+      forms:
+        incorrect_password: "Вы должны ввести верный текущий пароль."
+      security:
+        denied: "К этой части сайта доступ запрещен."
+        no_rights: "Недостаточно прав для этого действия."
+        organizations:
+          same_name_as_system: "Запрещено создавать организацию с таким же названием, как системная организация."
+      validations:
+        one: "При проверке введенных данных обнаружена ошибка."
+        many: "При проверке введенных данных обнаружены ошибки."
+        user:
+          has_no_such_user: "Пользователя с таким email'ом не существует."
+    notices:
+      data_sended: "Данные успешно отправлены."
+      users:
+        created: "Пользователь успешно добавлен. Ему будет отправлен e-mail с паролем."
+        updated: "Данные пользователя успешно изменены."
+        deleted: "Пользователь успешно удален."
+        pass_updated: "Пароль был успешно изменен."
+        admined: "Пользователь успешно назначен администратором организации."
+        unadmined: "Пользователь удален из группы администраторов организации."
+        new_password_sended: "Письмо с новым паролем было отправлено на указанную почту."
+        add_supervisor: "Пользователю успешно были добавлены права супервизора."
+        remove_supervisor: "Пользователю успешно были удалены права супервизора."
+        set_demo: "Пользователю успешно был успешно добавлен демо доступ."
+        remove_demo: "Пользователю успешно был добавлен полный доступ."
+      validations:
+        created: "Шаблон валидации был успешно сохранен."
+        updated: "Шаблон валидации был успешно изменен."
+        deleted: "Шаблон валидации был успешно удален."
+        assigned: "Валидации были добавлены к полю."
+      categories:
+        created: "Категория была успешно сохранена."
+        updated: "Информация о категории была успешно изменена."
+        deleted: "Категория была успешно удалена."
+      organizations:
+        created: "Организация была успешно сохранена."
+        updated: "Информация об организации была успешно изменена."
+        deleted: "Организация была успешно удалена."
+      fields:
+        created: "Шаблон поля был успешно сохранен."
+        updated: "Шаблон поля был успешно изменен."
+        deleted: "Шаблон поля был успешно удален."
+      orders:
+        created: "Форма заявки была успешно сохранена."
+        deleted: "Форма заявки была успешно удалена."
+        updated: "Форма заявки была успешно изменена."
+        published: "Заявка успешно опубликована."
+        unpublished: "Заявка успешно скрыта."
+        pub_error: "Ошибка при публикации."
+        cloned: "Форма заявки была успешно скопирована"
+        still_published: "Заявка опубликована или ждёт публикации."
+        still_to_delete: "Заявка ожидает удаления."
+      skins:
+        created: "Шаблон был успешно сохранен."
+        updated: "Шаблон был успешно изменен."
+        deleted: "Шаблон был успешно удален."
+
+  activerecord:
+    attributes:
+      user:
+        email: "E-mail"
+        phone: "Контактный телефон"
+        password: "Пароль"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        middle_name: "Отчество"
+        organization: "Организация"
+        current_password: "Текущий пароль"
+        password_confirmation: "Подтверждение нового пароля"
+      skin:
+        title: "Название шаблона"
+        body: "Формат шаблона"
+        width: "Ширина"
+        height: "Высота"
+        step_css: "Дополнительный код стилей для оформления шагов формы"
+        flow: "Формат вывода меню шагов"
+      category:
+        name: "Название категории"
+      field:
+        name: "Название поля"
+        category_id: "Категория"
+        organization_id: "Организации"
+        body: "Исходный код поля"
+      validation:
+        name: "Название валидации"
+        regexp: "Регулярное выражение для проверки (RegExp)"
+        default_error_message: "Сообщение об ошибке"
+      organization:
+        name: "Название организации"
+        server_url: "URL сервера интеграции"
+        server_port: "PORT сервера интеграции"
+        generator_url: "URL генератора"
+        generator_port: "PORT генератора"
+
+  devise:
+    failure:
+      already_authenticated: "Вы уже вошли в систему"
+      unauthenticated: "Вам необходимо войти в систему или зарегистрироваться"
+      invalid: "Неверный адрес e-mail или пароль"
+      timeout: "Ваш сеанс закончился. Пожалуйста, войдите в систему снова."
+    sessions:
+      signed_in: "Вход в систему выполнен."
+      signed_out: "Выход из системы выполнен."
+
+  ###########
+  # DEFAULT #
+  ###########
+  date:
+    abbr_day_names:
+    - Вс
+    - Пн
+    - Вт
+    - Ср
+    - Чт
+    - Пт
+    - Сб
+    abbr_month_names:
+    -
+    - янв.
+    - февр.
+    - марта
+    - апр.
+    - мая
+    - июня
+    - июля
+    - авг.
+    - сент.
+    - окт.
+    - нояб.
+    - дек.
+    day_names:
+    - воскресенье
+    - понедельник
+    - вторник
+    - среда
+    - четверг
+    - пятница
+    - суббота
+    formats:
+      default: ! '%d.%m.%Y'
+      long: ! '%d %B %Y'
+      short: ! '%d %b'
+    month_names:
+    -
+    - января
+    - февраля
+    - марта
+    - апреля
+    - мая
+    - июня
+    - июля
+    - августа
+    - сентября
+    - октября
+    - ноября
+    - декабря
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: около %{count} часов
+        many: около %{count} часов
+        one: около %{count} часа
+        other: около %{count} часа
+      about_x_months:
+        few: около %{count} месяцев
+        many: около %{count} месяцев
+        one: около %{count} месяца
+        other: около %{count} месяца
+      about_x_years:
+        few: около %{count} лет
+        many: около %{count} лет
+        one: около %{count} года
+        other: около %{count} лет
+      almost_x_years:
+        one: почти 1 год
+        few: почти %{count} года
+        many: почти %{count} лет
+        other: почти %{count} лет
+      half_a_minute: меньше минуты
+      less_than_x_minutes:
+        few: меньше %{count} минут
+        many: меньше %{count} минут
+        one: меньше %{count} минуты
+        other: меньше %{count} минуты
+      less_than_x_seconds:
+        few: меньше %{count} секунд
+        many: меньше %{count} секунд
+        one: меньше %{count} секунды
+        other: меньше %{count} секунды
+      over_x_years:
+        few: больше %{count} лет
+        many: больше %{count} лет
+        one: больше %{count} года
+        other: больше %{count} лет
+      x_days:
+        few: ! '%{count} дня'
+        many: ! '%{count} дней'
+        one: ! '%{count} день'
+        other: ! '%{count} дня'
+      x_minutes:
+        few: ! '%{count} минуты'
+        many: ! '%{count} минут'
+        one: ! '%{count} минуту'
+        other: ! '%{count} минуты'
+      x_months:
+        few: ! '%{count} месяца'
+        many: ! '%{count} месяцев'
+        one: ! '%{count} месяц'
+        other: ! '%{count} месяца'
+      x_seconds:
+        few: ! '%{count} секунды'
+        many: ! '%{count} секунд'
+        one: ! '%{count} секунда'
+        other: ! '%{count} секунды'
+    prompts:
+      day: День
+      hour: Часов
+      minute: Минут
+      month: Месяц
+      second: Секунд
+      year: Год
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      no_access: "У Вас нет прав доступа к этой странице"
+      expired: "устарела. Пожалуйста, запросите новую"
+      not_found: "не найдена"
+      not_saved:
+        one: "%{resource}: сохранение не удалось из-за %{count} ошибки"
+        few: "%{resource}: сохранение не удалось из-за %{count} ошибок"
+        many: "%{resource}: сохранение не удалось из-за %{count} ошибок"
+        other: "%{resource}: сохранение не удалось из-за %{count} ошибки"
+      accepted: нужно подтвердить
+      blank: не может быть пустым
+      confirmation: не совпадает с подтверждением
+      empty: не может быть пустым
+      equal_to: может иметь лишь значение, равное %{count}
+      even: может иметь лишь нечетное значение
+      exclusion: имеет зарезервированное значение
+      greater_than: может иметь значение большее %{count}
+      greater_than_or_equal_to: может иметь значение большее или равное %{count}
+      inclusion: имеет непредусмотренное значение
+      invalid: имеет неверное значение
+      less_than: может иметь значение меньшее чем %{count}
+      less_than_or_equal_to: может иметь значение меньшее или равное %{count}
+      not_a_number: не является числом
+      not_an_integer: не является целым числом
+      odd: может иметь лишь четное значение
+      record_invalid: ! 'Возникли ошибки: %{errors}'
+      taken: уже существует
+      too_long:
+        few: слишком большой длины (не может быть больше чем %{count} символа)
+        many: слишком большой длины (не может быть больше чем %{count} символов)
+        one: слишком большой длины (не может быть больше чем %{count} символ)
+        other: слишком большой длины (не может быть больше чем %{count} символа)
+      too_short:
+        few: недостаточной длины (не может быть меньше %{count} символов)
+        many: недостаточной длины (не может быть меньше %{count} символов)
+        one: недостаточной длины (не может быть меньше %{count} символа)
+        other: недостаточной длины (не может быть меньше %{count} символа)
+      wrong_length:
+        few: неверной длины (может быть длиной ровно %{count} символа)
+        many: неверной длины (может быть длиной ровно %{count} символов)
+        one: неверной длины (может быть длиной ровно %{count} символ)
+        other: неверной длины (может быть длиной ровно %{count} символа)
+    template:
+      body: ! 'Проблемы возникли со следующими полями:'
+      header:
+        few: ! '%{model}: сохранение не удалось из-за %{count} ошибок'
+        many: ! '%{model}: сохранение не удалось из-за %{count} ошибок'
+        one: ! '%{model}: сохранение не удалось из-за %{count} ошибки'
+        other: ! '%{model}: сохранение не удалось из-за %{count} ошибки'
+  helpers:
+    select:
+      prompt: ! 'Выберите: '
+    submit:
+      create: Создать %{model}
+      submit: Сохранить %{model}
+      update: Сохранить %{model}
+  number:
+    currency:
+      format:
+        delimiter: ! ' '
+        format: ! '%n %u'
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: руб.
+    format:
+      delimiter: ! ' '
+      precision: 3
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion:
+            few: миллиардов
+            many: миллиардов
+            one: миллиард
+            other: миллиардов
+          million:
+            few: миллионов
+            many: миллионов
+            one: миллион
+            other: миллионов
+          quadrillion:
+            few: квадриллионов
+            many: квадриллионов
+            one: квадриллион
+            other: квадриллионов
+          thousand:
+            few: тысяч
+            many: тысяч
+            one: тысяча
+            other: тысяч
+          trillion:
+            few: триллионов
+            many: триллионов
+            one: триллион
+            other: триллионов
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            few: байта
+            many: байт
+            one: байт
+            other: байта
+          gb: ГБ
+          kb: КБ
+          mb: МБ
+          tb: ТБ
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' и '
+      two_words_connector: ! ' и '
+      words_connector: ! ', '
+  time:
+    am: утра
+    formats:
+      default: ! '%a, %d %b %Y, %H:%M:%S %z'
+      long: ! '%d %B %Y, %H:%M'
+      short: ! '%d %b, %H:%M'
+    pm: вечера

@@ -1,0 +1,1 @@
+To customize form behavior, in shared/neatforms folder create config_<latin letters from order description without spaces and in lower case>.js and include all you need for the form to behave well. See example in config_homecreditbank.js.

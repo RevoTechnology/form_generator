@@ -1,0 +1,30 @@
+window.preview_mode = false
+
+window.preview_form_id =
+= @version.order.builder_id
+
+window.existing_skin =
+= @version.skin_json
+
+window.validations =
+= @version.validations_json
+
+window.scenarios =
+= @version.scenarios_json
+
+window.fields =
+= @version.fields_element_ids
+
+window.organization_url =
+= raw "\"#{@version.order.organization.full_server_urls.first}\""
+
+window.order_info = {
+= "version_id: #{@version.id},"
+= "order_id: #{@version.order.id}"
+}
+
+window.post_index_puller =
+= @version.zip_code_data_finder
+
+window.suggestion_urls =
+= @version.suggestion_data
