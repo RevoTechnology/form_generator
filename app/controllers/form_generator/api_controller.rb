@@ -1,5 +1,5 @@
 require 'json'
-require 'form_generator/scub_coral/scub_coral'
+# require 'form_generator/scub_coral/scub_coral'
 module FormGenerator
   class ApiController < ActionController::Base
     # before_filter :parse_json_data

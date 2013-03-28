@@ -1,10 +1,7 @@
 # encoding: UTF-8
-require 'form_generator/removal/removal'
 
 module FormGenerator
   class Validation < ActiveRecord::Base
-    include Removal
-
     has_and_belongs_to_many :organizations
 
     validates :name, :presence => true
@@ -23,10 +20,6 @@ module FormGenerator
     attr_accessible :organization_id, :organization
     validates_presence_of :organization_id
     scope :in_organization, lambda {|organization| where(:organization_id => organization.id) }
-
-
-
-
 
     attr_accessible :name, :regexp, :default_error_message, :id, :deleted
 

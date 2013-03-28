@@ -1,9 +1,5 @@
-require 'form_generator/removal/removal'
-
 module FormGenerator
   class Field < ActiveRecord::Base
-    include Removal
-
     has_and_belongs_to_many :organizations
     validates :name, :presence => true
     validates_uniqueness_of :name, :scope => :organization_id
@@ -23,10 +19,6 @@ module FormGenerator
 
 
     attr_accessible :name, :body, :category_id
-
-    belongs_to :category
-
-    validates_presence_of :category_id
     validates :body, :presence => true
 
     def list_from_categories_json_for_builder

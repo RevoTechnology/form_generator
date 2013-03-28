@@ -1,11 +1,10 @@
 # encoding: UTF-8
 require 'form_generator/cream/cream'
-require 'form_generator/removal/removal'
 
 module FormGenerator
   class Order < ActiveRecord::Base
     #TODO: отрефакторить этот класс
-    include Cream, Removal
+    include Cream
 
     attr_accessible :description, :body, :organization_id, :public_hash, :skin_id, :version, :to_delete, :deleted_by, :deleted, :builder_id, :id
 
