@@ -6,8 +6,6 @@ module FormGenerator
     attr_accessible :builder_id, :deleted, :id
     attr_accessible :body
 
-    before_save :set_latin_name
-
     has_many :orders #, :dependent => :destroy
     has_many :skins #, :dependent => :destroy
     has_many :fields #, :dependent => :destroy
@@ -48,10 +46,5 @@ module FormGenerator
     # def soft_delete
     #     update_attribute :deleted, true
     #   end
-
-    private
-      def set_latin_name
-        self.latin_name = Ogma.transliterate(name).gsub(/\W/, "-").squeeze("-").gsub(/^\-|\-$/, "")
-      end
   end
 end
