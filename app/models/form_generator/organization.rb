@@ -1,10 +1,5 @@
-require 'form_generator/removal/removal'
-require 'form_generator/ogma/ogma'
-
 module FormGenerator
   class Organization < ActiveRecord::Base
-    include Removal
-
     attr_accessible :system
     attr_accessible :name, :latin_name
     attr_accessible :server_urls, :generator_url, :generator_port
@@ -13,12 +8,9 @@ module FormGenerator
 
     before_save :set_latin_name
 
-    has_many :users #, :dependent => :destroy
     has_many :orders #, :dependent => :destroy
     has_many :skins #, :dependent => :destroy
     has_many :fields #, :dependent => :destroy
-    has_many :categories #, :dependent => :destroy
-    has_and_belongs_to_many :categories
     has_and_belongs_to_many :fields
     has_and_belongs_to_many :validations
 

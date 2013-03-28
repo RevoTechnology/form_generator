@@ -1,3 +1,3 @@
 module FormGenerator
-  VERSION = "0.0.6"
+  VERSION = "0.1.32"
 end
