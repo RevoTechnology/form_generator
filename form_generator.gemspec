@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Max Bulgakov"]
   s.email       = ["madmacj@gmail.com"]
   s.homepage    = "http://gems.theteam.io/"
-  s.summary     = "Generator produce order forms."
-  s.description = "Is a gem for NetSmarts system, for producing a order form pages."
+  s.summary     = "Generator of HTML forms from YAML source."
+  s.description = "A gem for NetSmarts system, for generating forms with different stuff."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

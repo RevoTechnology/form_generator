@@ -265,15 +265,12 @@ module FormGenerator
         @default_value = ((@params[@parameter] == true || @params[@parameter] == 'true') ? true : false) if @params.has_key? @parameter
 
         label_tag @element_id do
+          if @tooltip.present?
+            check_box_tag(@element_id, "", @default_value, {:data => data}.merge(@attributes)) + @label + content_tag(:span, "<ins>#{@tooltip}</ins>".html_safe, { :class => "help" })
+          else
             check_box_tag(@element_id, "", @default_value, {:data => data}.merge(@attributes)) + @label
+          end
         end
-        # end
-
-        # if @tooltip.present?
-        #   check_box_tag(@element_id, "", @default_value, :data => data) # + content_tag(:span, "?", { :class => "tooltip", "data-tooltip" => @tooltip}) + @label
-        # else
-        #   check_box_tag(@element_id, "", @default_value, :data => data) # + @label
-        # end
       end
 
       def render_button
@@ -388,7 +385,7 @@ module FormGenerator
 
       def label
         if @from_group
-          "".html_safe
+          "".html_safe + (content_tag(:span, "", { :id => "#{element_id}_hover_tooltip", :class => "tooltip", "data-tooltip" => @tooltip}) if @tooltip.present? )
         else
           label_tag(@element_id, [@label, @required ? "<span class='req'>*</span>" : ""].join.html_safe) +
           content_tag(:span, "", { :class => :hover_error, :id => "#{@element_id}_hover_error" }) +
