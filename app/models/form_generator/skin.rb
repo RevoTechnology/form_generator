@@ -19,7 +19,7 @@ module FormGenerator
     belongs_to :organization
     attr_accessible :organization_id, :organization
     validates_presence_of :organization_id
-    scope :in_organization, lambda {|organization| where(:organization_id => organization.id) }
+    scope :in_organization, lambda { |organization| where(:organization_id => organization.id) }
     validates :body, :presence => true
     validates :width, :presence => true
     validates :height, :presence => true

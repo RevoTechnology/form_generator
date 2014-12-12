@@ -13,9 +13,9 @@ module FormGenerator
     belongs_to :order
     belongs_to :skin
 
-    default_scope order('major_version DESC').order('minor_version DESC')
-    scope :published, where(:published => true)
-    scope :recent, order("created_at desc").limit(5)
+    default_scope { order('major_version DESC').order('minor_version DESC') }
+    scope :published, ->{ where(:published => true) }
+    scope :recent, ->{ order("created_at desc").limit(5) }
 
     def version
       "#{major_version}.#{minor_version}"

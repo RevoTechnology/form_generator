@@ -15,7 +15,7 @@ module FormGenerator
     belongs_to :organization
     attr_accessible :organization_id, :organization, :id, :deleted
     validates_presence_of :organization_id
-    scope :in_organization, lambda {|organization| where(:organization_id => organization.id) }
+    scope :in_organization, lambda { |organization| where(:organization_id => organization.id) }
 
 
     attr_accessible :name, :body, :category_id
