@@ -23,7 +23,7 @@ module FormGenerator
 
     attr_accessible :name, :regexp, :default_error_message, :id, :deleted
 
-    validates :regexp, :presence => true, :format => { :with => /^\/.+\/$/ }
+    validates :regexp, :presence => true, :format => { :with => /\A\/.+\/\z/ }
     validates :default_error_message, :presence => true, :length => { :maximum => 100 }
   end
 end
