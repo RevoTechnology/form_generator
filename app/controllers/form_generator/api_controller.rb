@@ -2,6 +2,7 @@ require 'json'
 require 'form_generator/scub_coral/scub_coral'
 module FormGenerator
   class ApiController < ActionController::Base
+    protect_from_forgery
     # before_filter :parse_json_data
     # before_filter :cors_preflight_check
     before_filter :spatial_distortion, :only => [:order, :organization, :field, :skin, :validation]
