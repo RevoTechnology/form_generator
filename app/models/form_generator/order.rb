@@ -4,7 +4,7 @@ require 'form_generator/cream/cream'
 module FormGenerator
   class Order < ActiveRecord::Base
     #TODO: отрефакторить этот класс
-    include FormGenerator::Cream
+    include ::FormGenerator::Cream
 
     attr_accessible :description, :body, :organization_id, :public_hash, :skin_id, :version, :to_delete, :deleted_by, :deleted, :builder_id, :id
 
