@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'dbf'
   s.add_dependency 'awesome_nested_set'
   s.add_dependency 'haml'
-  s.add_dependency "squeel"
   s.add_dependency 'unicorn'
 
 
