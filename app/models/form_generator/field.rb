@@ -13,12 +13,10 @@ module FormGenerator
     end
 
     belongs_to :organization
-    attr_accessible :organization_id, :organization, :id, :deleted
     validates_presence_of :organization_id
     scope :in_organization, lambda { |organization| where(:organization_id => organization.id) }
 
 
-    attr_accessible :name, :body, :category_id
     validates :body, :presence => true
 
     def list_from_categories_json_for_builder

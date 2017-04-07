@@ -17,11 +17,8 @@ module FormGenerator
     end
 
     belongs_to :organization
-    attr_accessible :organization_id, :organization
     validates_presence_of :organization_id
     scope :in_organization, lambda { |organization| where(:organization_id => organization.id) }
-
-    attr_accessible :name, :regexp, :default_error_message, :id, :deleted
 
     validates :regexp, :presence => true, :format => { :with => /\A\/.+\/\z/ }
     validates :default_error_message, :presence => true, :length => { :maximum => 100 }

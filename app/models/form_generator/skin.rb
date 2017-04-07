@@ -1,8 +1,5 @@
 module FormGenerator
   class Skin < ActiveRecord::Base
-    attr_accessible :title, :body, :width, :height, :custom_css, :deleted, :flow, :organization_id
-    attr_accessible :builder_id, :deleted
-
     has_many :orders
     validates :title, :presence => true
     validates_uniqueness_of :title, :scope => :organization_id
@@ -17,7 +14,6 @@ module FormGenerator
     end
 
     belongs_to :organization
-    attr_accessible :organization_id, :organization
     validates_presence_of :organization_id
     scope :in_organization, lambda { |organization| where(:organization_id => organization.id) }
     validates :body, :presence => true

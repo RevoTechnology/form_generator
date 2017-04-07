@@ -1,11 +1,5 @@
 module FormGenerator
   class Organization < ActiveRecord::Base
-    attr_accessible :system
-    attr_accessible :name, :latin_name
-    attr_accessible :server_urls, :generator_url, :generator_port
-    attr_accessible :builder_id, :deleted, :id
-    attr_accessible :body
-
     has_many :orders #, :dependent => :destroy
     has_many :skins #, :dependent => :destroy
     has_many :fields #, :dependent => :destroy

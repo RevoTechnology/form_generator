@@ -5,8 +5,6 @@ module FormGenerator
     #TODO: отрефакторить этот класс
     include Cream
 
-    attr_accessible :description, :body, :published, :major_version, :minor_version, :order_id, :skin_id, :user_id, :in_review, :deleted, :builder_id, :created_at, :id, :updated_at
-
     validates :body, :presence => true
 
     belongs_to :user
