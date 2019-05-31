@@ -2,7 +2,6 @@
 module FormGenerator
   class Public::JsController < FrontendController
     layout false # This controller generates only javascript files
-    caches_page :preview, :public
 
     def public
       @version = Order.where(:public_hash => params[:public_hash]).first.published_version
