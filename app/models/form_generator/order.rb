@@ -6,8 +6,6 @@ module FormGenerator
     #TODO: отрефакторить этот класс
     include ::FormGenerator::Cream
 
-    attr_accessible :description, :body, :organization_id, :public_hash, :skin_id, :version, :to_delete, :deleted_by, :deleted, :builder_id, :id
-
     def self.available_for organization
       if organization.system?
         where("1=1")
@@ -18,11 +16,8 @@ module FormGenerator
     end
 
     belongs_to :organization
-    attr_accessible :organization_id, :organization
     validates_presence_of :organization_id
-    scope :in_organization, lambda {|organization| where(:organization_id => organization.id) }
-
-    attr_accessible :body, :description, :version, :skin_id
+    scope :in_organization, lambda { |organization| where(:organization_id => organization.id) }
 
     belongs_to :skin
     has_many :order_versions, :dependent => :destroy

@@ -2,12 +2,13 @@ require 'json'
 require 'form_generator/scub_coral/scub_coral'
 module FormGenerator
   class ApiController < ActionController::Base
-    # before_filter :parse_json_data
-    # before_filter :cors_preflight_check
-    before_filter :spatial_distortion, :only => [:order, :organization, :field, :skin, :validation]
-    before_filter :get_client_information
-    # after_filter :cors_set_access_control_headers
-    skip_before_filter :verify_authenticity_token
+    protect_from_forgery
+    # before_action :parse_json_data
+    # before_action :cors_preflight_check
+    before_action :spatial_distortion, :only => [:order, :organization, :field, :skin, :validation]
+    before_action :get_client_information
+    # after_action :cors_set_access_control_headers
+    skip_before_action :verify_authenticity_token
     # @received_data[key] = val.is_a?(String) ? JSON.parse(val,:symbolize_names => true) : val
 
     def order
